@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050505;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+}
+
+/* GLASSMORPHISM KARTEN */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* GRADIENT GRÜN */
+.gradient-text {
+  background: linear-gradient(135deg, #2d7a4f, #4CAF50, #1a4d2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0a0a0a 0%, #0d1f15 50%, #0a0a0a 100%);
+}
+
+.gradient-button {
+  background: linear-gradient(135deg, #1a4d2e, #2d7a4f, #4CAF50);
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(135deg, #4CAF50, #2d7a4f, #1a4d2e);
+  box-shadow: 0 0 30px rgba(45, 122, 79, 0.5);
+}
+
+/* GLOW EFFEKT */
+.glow {
+  box-shadow: 0 0 20px rgba(45, 122, 79, 0.2);
+}
+
+.glow:hover {
+  box-shadow: 0 0 40px rgba(45, 122, 79, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#1a4d2e, #4CAF50);
+  border-radius: 3px;
+}
+select option {
+  background: #111 !important;
+  color: white !important;
+}
+
+select {
+  color-scheme: dark;
+}
+/* MOBILE OPTIMIERUNG */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  nav {
+    padding: 15px 20px !important;
+  }
+
+  .glass {
+    border-radius: 15px !important;
+  }
+}
