@@ -11,15 +11,11 @@ function Impressum() {
     }}>
 
       <div style={{
-        position: 'fixed',
-        top: '30%',
-        left: '50%',
+        position: 'fixed', top: '30%', left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '600px',
-        height: '600px',
+        width: '600px', height: '600px',
         background: 'radial-gradient(circle, rgba(45,122,79,0.08) 0%, transparent 70%)',
-        pointerEvents: 'none',
-        zIndex: 0
+        pointerEvents: 'none', zIndex: 0
       }} />
 
       <motion.div
@@ -46,6 +42,10 @@ function Impressum() {
           {
             titel: 'Kontakt',
             inhalt: 'E-Mail: konradwendel26@gmail.com\nTelefon: 01637754482'
+          },
+          {
+            titel: 'Steuerliche Angaben',
+            inhalt: 'Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).'
           },
           {
             titel: 'Haftung für Inhalte',
@@ -77,17 +77,6 @@ function Impressum() {
             </p>
           </motion.div>
         ))}
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="glass"
-          style={{ padding: '20px', border: '1px solid rgba(45,122,79,0.3)' }}
-        >
-          <p style={{ color: '#888', fontSize: '0.9rem', lineHeight: '1.7' }}>
-          </p>
-        </motion.div>
 
       </motion.div>
     </div>

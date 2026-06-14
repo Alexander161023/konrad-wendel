@@ -8,13 +8,16 @@ import Rezensionen from './pages/Rezensionen'
 import FAQ from './pages/FAQ'
 import Impressum from './pages/Impressum'
 import Preise from './pages/Preise'
+import Datenschutz from './pages/Datenschutz'
 import Navbar from './components/Navbar'
+import CookieBanner from './components/CookieBanner'
 import './App.css'
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <CookieBanner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/leistungen" element={<Leistungen />} />
@@ -25,6 +28,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/preise" element={<Preise />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
       </Routes>
     </Router>
   )

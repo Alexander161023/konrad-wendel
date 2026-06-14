@@ -10,9 +10,7 @@ function Navbar() {
       {/* NAVBAR */}
       <nav style={{
         position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
+        top: 0, left: 0, right: 0,
         zIndex: 1000,
         display: 'flex',
         justifyContent: 'space-between',
@@ -23,7 +21,6 @@ function Navbar() {
         borderBottom: '1px solid rgba(45,122,79,0.15)',
       }}>
 
-        {/* LOGO */}
         <Link to="/" style={{ textDecoration: 'none' }}>
           <motion.img
             src="/logo.png"
@@ -33,7 +30,6 @@ function Navbar() {
           />
         </Link>
 
-        {/* BURGER BUTTON */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           style={{
@@ -47,26 +43,18 @@ function Navbar() {
             padding: '10px',
           }}
         >
-          <motion.span
-            animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 7 : 0 }}
-            style={{ display: 'block', width: '25px', height: '2px', background: '#2d7a4f' }}
-          />
-          <motion.span
-            animate={{ opacity: menuOpen ? 0 : 1 }}
-            style={{ display: 'block', width: '25px', height: '2px', background: '#2d7a4f' }}
-          />
-          <motion.span
-            animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -7 : 0 }}
-            style={{ display: 'block', width: '25px', height: '2px', background: '#2d7a4f' }}
-          />
+          <motion.span animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 7 : 0 }}
+            style={{ display: 'block', width: '25px', height: '2px', background: '#2d7a4f' }} />
+          <motion.span animate={{ opacity: menuOpen ? 0 : 1 }}
+            style={{ display: 'block', width: '25px', height: '2px', background: '#2d7a4f' }} />
+          <motion.span animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -7 : 0 }}
+            style={{ display: 'block', width: '25px', height: '2px', background: '#2d7a4f' }} />
         </button>
       </nav>
 
-      {/* BURGER MENU */}
       <AnimatePresence>
         {menuOpen && (
           <>
-            {/* HINTERGRUND OVERLAY */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -81,7 +69,6 @@ function Navbar() {
               }}
             />
 
-            {/* MENU PANEL */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -103,7 +90,6 @@ function Navbar() {
                 gap: '25px'
               }}
             >
-              {/* LOGO IM MENU */}
               <img src="/logo.png" alt="Logo" style={{ height: '60px', marginBottom: '20px', filter: 'drop-shadow(0 0 10px rgba(45,122,79,0.3))' }} />
 
               {[
@@ -116,13 +102,9 @@ function Navbar() {
                 { label: 'FAQ', path: '/faq' },
                 { label: 'Kontakt', path: '/kontakt' },
                 { label: 'Impressum', path: '/impressum' },
+                { label: 'Datenschutz', path: '/datenschutz' },
               ].map((item, i) => (
-                <motion.div
-                  key={item.path}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
+                <motion.div key={item.path} initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}>
                   <Link
                     to={item.path}
                     onClick={() => setMenuOpen(false)}
@@ -145,30 +127,47 @@ function Navbar() {
                 </motion.div>
               ))}
 
-              {/* KONTAKT BUTTON */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                style={{ marginTop: '20px' }}
+              {/* SHOP BUTTON */}
+              <a
+                href="https://www.seedshirt.de/shop/wildline"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  display: 'block',
+                  border: '1px solid rgba(45,122,79,0.5)',
+                  color: '#2d7a4f',
+                  padding: '12px 25px',
+                  borderRadius: '30px',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  fontFamily: 'Bebas Neue',
+                  letterSpacing: '2px',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  boxSizing: 'border-box'
+                }}
               >
-                <Link to="/kontakt" onClick={() => setMenuOpen(false)}>
-                  <button className="gradient-button" style={{
-                    width: '100%',
-                    color: 'white',
-                    border: 'none',
-                    padding: '15px',
-                    borderRadius: '30px',
-                    fontSize: '1rem',
-                    fontWeight: 'bold',
-                    cursor: 'pointer',
-                    letterSpacing: '2px',
-                    fontFamily: 'Bebas Neue'
-                  }}>
-                    JETZT ANFRAGEN →
-                  </button>
-                </Link>
-              </motion.div>
+                UNSER SHOP →
+              </a>
+
+              {/* ANFRAGEN BUTTON */}
+              <Link to="/kontakt" onClick={() => setMenuOpen(false)}>
+                <button className="gradient-button" style={{
+                  width: '100%',
+                  color: 'white',
+                  border: 'none',
+                  padding: '15px',
+                  borderRadius: '30px',
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  cursor: 'pointer',
+                  fontFamily: 'Bebas Neue',
+                  letterSpacing: '2px'
+                }}>
+                  JETZT ANFRAGEN →
+                </button>
+              </Link>
 
             </motion.div>
           </>
