@@ -36,8 +36,8 @@ function Impressum() {
 
         {[
           {
-            titel: 'Angaben gemäß § 5 TMG',
-            inhalt: 'Konrad Wendel Textile Solutions\nMarkt 15\n07407,Rudolstadt\nDeutschland'
+            titel: 'Angaben gemäß § 5 DDG',
+            inhalt: 'Konrad Wendel Textile Solutions\nKonrad Wendel\nMarkt 15\n07407 Rudolstadt\nDeutschland'
           },
           {
             titel: 'Kontakt',
@@ -45,19 +45,23 @@ function Impressum() {
           },
           {
             titel: 'Steuerliche Angaben',
-            inhalt: 'Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).'
+            inhalt: 'Steuernummer: 165/286/06605\nGemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).'
+          },
+          {
+            titel: 'Streitschlichtung',
+            inhalt: 'Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.'
           },
           {
             titel: 'Haftung für Inhalte',
-            inhalt: 'Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.'
+            inhalt: 'Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.'
           },
           {
             titel: 'Urheberrecht',
-            inhalt: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.'
+            inhalt: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung und Verbreitung bedürfen der schriftlichen Zustimmung des jeweiligen Autors.'
           },
           {
             titel: 'Datenschutz',
-            inhalt: 'Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich.'
+            inhalt: 'Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Weitere Informationen findest du in unserer Datenschutzerklärung.'
           },
         ].map((abschnitt, i) => (
           <motion.div
