@@ -10,6 +10,7 @@ import Impressum from './pages/Impressum'
 import Preise from './pages/Preise'
 import Datenschutz from './pages/Datenschutz'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
 import './App.css'
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/preise" element={<Preise />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

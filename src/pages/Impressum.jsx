@@ -41,11 +41,11 @@ function Impressum() {
           },
           {
             titel: 'Kontakt',
-            inhalt: 'E-Mail: konradwendel26@gmail.com\nTelefon: 01637754482'
+            inhalt: 'E-Mail: konradwendel26@gmail.com\nKontaktformular: Über unsere Website erreichbar'
           },
           {
             titel: 'Steuerliche Angaben',
-            inhalt: 'Steuernummer: 165/286/06605\nGemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).'
+            inhalt: 'Wirtschafts-Identifikationsnummer (W-IdNr.): DE463098997\nGemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).'
           },
           {
             titel: 'Streitschlichtung',
