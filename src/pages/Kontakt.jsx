@@ -135,6 +135,17 @@ function Kontakt() {
               onClick={handleSubmit} disabled={laden}
               className="gradient-button"
               style={{ color: 'white', border: 'none', padding: '18px', borderRadius: '30px', fontSize: '1.1rem', fontWeight: 'bold', cursor: laden ? 'not-allowed' : 'pointer', fontFamily: 'Bebas Neue', letterSpacing: '2px', opacity: laden ? 0.7 : 1 }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+  <input
+    type="checkbox"
+    id="datenschutz"
+    required
+    style={{ marginTop: '4px', accentColor: '#2d7a4f', width: '18px', height: '18px', cursor: 'pointer', flexShrink: 0 }}
+  />
+  <label htmlFor="datenschutz" style={{ color: '#888', fontSize: '0.85rem', lineHeight: '1.6' }}>
+    Ich habe die <a href="/datenschutz" style={{ color: '#2d7a4f' }} target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *
+  </label>
+</div>
               {laden ? 'WIRD GESENDET...' : 'ANFRAGE ABSENDEN →'}
             </motion.button>
           </motion.div>
